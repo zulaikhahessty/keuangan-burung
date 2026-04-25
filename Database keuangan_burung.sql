@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 09, 2025 at 08:04 AM
+-- Generation Time: Apr 25, 2026 at 02:22 AM
 -- Server version: 8.4.3
 -- PHP Version: 8.3.16
 
@@ -32,6 +32,18 @@ CREATE TABLE `cache` (
   `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cache`
+--
+
+INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
+('laravel-cache-admsemarfin@gmail.com|127.0.0.1', 'i:1;', 1776962311),
+('laravel-cache-admsemarfin@gmail.com|127.0.0.1:timer', 'i:1776962311;', 1776962311),
+('laravel-cache-coba@gmail.com|127.0.0.1', 'i:1;', 1776962516),
+('laravel-cache-coba@gmail.com|127.0.0.1:timer', 'i:1776962516;', 1776962516),
+('laravel-cache-zulaikhahesty@gmail.com|127.0.0.1', 'i:2;', 1776962151),
+('laravel-cache-zulaikhahesty@gmail.com|127.0.0.1:timer', 'i:1776962151;', 1776962151);
 
 -- --------------------------------------------------------
 
@@ -69,9 +81,9 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `tanggal`, `venue`, `saldo_awal`, `total_tiket`, `total_hadiah`, `total_operasional`, `saldo_akhir`, `created_at`, `updated_at`) VALUES
-(1, '2025-09-07', 'Colomadu', 0, 33430000, 22120000, 13331000, -4671000, '2025-09-06 21:35:02', '2025-10-05 00:31:15'),
-(2, '2025-09-16', 'dddd', -2021000, 600000, 460000, 0, -1881000, '2025-09-16 03:06:02', '2025-09-16 03:35:09'),
-(4, '2025-10-05', 'Gawanan', 0, 19840000, 14300000, 2400000, 1360000, '2025-10-05 04:47:01', '2025-10-05 05:49:31');
+(4, '2025-10-05', 'Gawanan', 0, 19840000, 14300000, 2400000, 1360000, '2025-10-05 04:47:01', '2025-10-05 05:49:31'),
+(8, '2026-04-01', 'cawas', 0, 1000000, 650000, 50000, 275000, '2026-04-23 10:05:09', '2026-04-23 10:16:56'),
+(9, '2026-04-09', 'Klaten', 0, 2500000, 600000, 100000, 1725002, '2026-04-24 09:03:48', '2026-04-24 09:06:46');
 
 -- --------------------------------------------------------
 
@@ -162,27 +174,12 @@ CREATE TABLE `kelas_lombas` (
 --
 
 INSERT INTO `kelas_lombas` (`id`, `event_id`, `nama_kelas`, `harga_tiket`, `jumlah_peserta`, `total_tiket`, `hadiah_1`, `hadiah_2`, `hadiah_3`, `hadiah_4`, `hadiah_5`, `hadiah_6`, `hadiah_7`, `hadiah_8`, `hadiah_9`, `hadiah_10`, `total_hadiah`, `hadiah`, `jumlah_piala`, `sisa_piala`, `sisa_tiket`, `laba_bersih`, `created_at`, `updated_at`) VALUES
-(2, 1, 'MURAI BATU SAHABAT SAP-', 110000, 30, 3300000, 1000000, 600000, 300000, 170000, 150000, 110000, 0, 0, 0, 0, 2330000, 0, 200000, 0, 0, 770000, '2025-09-10 00:34:54', '2025-09-21 21:34:52'),
-(3, 1, 'CUCAK HIAJU COLOMADU', 55000, 19, 1045000, 200000, 125000, 70000, 55000, 0, 0, 0, 0, 0, 0, 450000, 0, 200000, 0, 0, 395000, '2025-09-10 00:37:01', '2025-09-21 21:35:03'),
-(4, 1, 'MURAI REMAJA AIR AJAIB', 110000, 13, 1430000, 350000, 180000, 110000, 0, 0, 0, 0, 0, 0, 0, 640000, 0, 200000, 0, 0, 590000, '2025-09-10 00:38:03', '2025-09-21 21:35:18'),
-(5, 1, 'MURAI BATU AKP', 220000, 24, 5280000, 1500000, 800000, 550000, 350000, 220000, 0, 0, 0, 0, 0, 3420000, 0, 200000, 0, 0, 1660000, '2025-09-10 00:41:27', '2025-09-21 21:35:25'),
-(6, 1, 'CUCAK HIAJU SEMAR', 110000, 16, 1760000, 600000, 350000, 200000, 110000, 0, 0, 0, 0, 0, 0, 1260000, 0, 200000, 0, 0, 300000, '2025-09-10 00:43:09', '2025-09-21 21:35:32'),
-(7, 1, 'MURAI REMAJA ABDI DALEM', 220000, 12, 2640000, 800000, 400000, 0, 0, 0, 0, 0, 0, 0, 0, 1200000, 0, 150000, 0, 0, 1290000, '2025-09-10 00:44:29', '2025-09-21 21:35:42'),
-(8, 1, 'MURAI BATU HALAL BI HALAL', 350000, 16, 5600000, 4000000, 1000000, 600000, 0, 0, 0, 0, 0, 0, 0, 5600000, 0, 50000, 0, 0, -50000, '2025-09-10 00:46:57', '2025-10-05 00:31:15'),
-(9, 1, 'CUCAK HIJAU MANDRO SF', 85000, 24, 2040000, 600000, 350000, 200000, 100000, 85000, 0, 0, 0, 0, 0, 1335000, 0, 200000, 0, 0, 505000, '2025-09-10 00:49:08', '2025-09-21 21:35:55'),
-(10, 1, 'MURAI REMAJA FAGAS', 85000, 16, 1360000, 300000, 160000, 120000, 0, 0, 0, 0, 0, 0, 0, 580000, 0, 200000, 0, 0, 580000, '2025-09-10 00:49:58', '2025-09-21 21:36:01'),
-(11, 1, 'MURAI BATU MODAL NEKAT', 110000, 24, 2640000, 700000, 500000, 300000, 150000, 110000, 0, 0, 0, 0, 0, 1760000, 0, 200000, 0, 0, 680000, '2025-09-10 00:50:39', '2025-09-21 21:36:07'),
-(12, 1, 'CUCAK HIJAU B COLOMADU', 55000, 16, 880000, 180000, 110000, 65000, 0, 0, 0, 0, 0, 0, 0, 355000, 0, 200000, 0, 0, 325000, '2025-09-10 00:51:35', '2025-09-21 21:36:15'),
-(13, 1, 'MURAI REMAJA KHOLIQ CAR', 55000, 8, 440000, 125000, 55000, 0, 0, 0, 0, 0, 0, 0, 0, 180000, 0, 100000, 0, 0, 160000, '2025-09-10 00:52:11', '2025-10-04 23:49:57'),
-(14, 1, 'MURAI BATU FAGAS', 85000, 15, 1275000, 250000, 150000, 100000, 0, 0, 0, 0, 0, 0, 0, 500000, 0, 200000, 0, 0, 575000, '2025-09-10 00:52:44', '2025-09-21 21:36:21'),
-(15, 1, 'MB DEWASA TAMBAHAN', 55000, 8, 440000, 125000, 55000, 0, 0, 0, 0, 0, 0, 0, 0, 180000, 0, 150000, 0, 0, 110000, '2025-09-10 00:53:12', '2025-09-21 21:36:27'),
-(16, 1, 'MURAI BATU SAHABAT SAP-', 110000, 30, 3300000, 1000000, 600000, 300000, 170000, 150000, 110000, 0, 0, 0, 0, 2330000, 0, 200000, 0, 0, 770000, '2025-09-10 20:14:29', '2025-09-21 21:36:32'),
-(17, 2, 'murai batu losgan', 15000, 24, 360000, 100000, 60000, 50000, 30000, 20000, 0, 0, 0, 0, 0, 260000, 0, 5, 0, 0, 100000, '2025-09-16 03:08:59', '2025-09-16 03:08:59'),
-(18, 2, 'fdddu', 20000, 12, 240000, 200000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 200000, 0, 2, 0, 0, 40000, '2025-09-16 03:35:09', '2025-09-16 03:35:09'),
 (19, 4, 'mb dewasa ginastel', 220000, 24, 5280000, 2000000, 1000000, 500000, 350000, 250000, 0, 0, 0, 0, 0, 4100000, 0, 220000, 0, 0, 960000, '2025-10-05 04:49:49', '2025-10-05 04:49:49'),
 (20, 4, 'mb dewasa bulldog', 350000, 24, 8400000, 3000000, 1500000, 800000, 500000, 350000, 0, 0, 0, 0, 0, 6150000, 0, 350000, 0, 0, 1900000, '2025-10-05 04:52:00', '2025-10-05 04:52:00'),
 (21, 4, 'mb remaja', 110000, 24, 2640000, 1000000, 500000, 250000, 160000, 110000, 0, 0, 0, 0, 0, 2020000, 0, 1100000, 0, 0, -480000, '2025-10-05 05:43:29', '2025-10-05 05:43:29'),
-(22, 4, 'mb dewasa arena', 110000, 32, 3520000, 1000000, 500000, 200000, 110000, 110000, 110000, 0, 0, 0, 0, 2030000, 0, 110000, 0, 0, 1380000, '2025-10-05 05:45:25', '2025-10-05 05:45:25');
+(22, 4, 'mb dewasa arena', 110000, 32, 3520000, 1000000, 500000, 200000, 110000, 110000, 110000, 0, 0, 0, 0, 2030000, 0, 110000, 0, 0, 1380000, '2025-10-05 05:45:25', '2025-10-05 05:45:25'),
+(25, 8, 'murai kicau mania', 50000, 20, 1000000, 300000, 200000, 150000, 0, 0, 0, 0, 0, 0, 0, 650000, 0, 25000, 0, 0, 325000, '2026-04-23 10:14:28', '2026-04-23 10:15:45'),
+(26, 9, 'murai pink putih', 50000, 50, 2500000, 300000, 200000, 100000, 0, 0, 0, 0, 0, 0, 0, 600000, 0, 74998, 0, 0, 1825002, '2026-04-24 09:06:20', '2026-04-24 09:06:20');
 
 -- --------------------------------------------------------
 
@@ -245,38 +242,6 @@ CREATE TABLE `pengeluarans` (
 --
 
 INSERT INTO `pengeluarans` (`id`, `event_id`, `uraian`, `jumlah`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Juri 1', 400000, '2025-09-10 00:55:59', '2025-09-10 00:55:59'),
-(2, 1, 'Juri 2', 300000, '2025-09-10 00:56:12', '2025-09-10 00:56:12'),
-(3, 1, 'Juri 3', 300000, '2025-09-10 00:56:24', '2025-09-10 00:56:24'),
-(4, 1, 'Juri 4', 300000, '2025-09-10 00:56:36', '2025-09-10 00:56:36'),
-(5, 1, 'Juri 5', 300000, '2025-09-10 00:56:49', '2025-09-10 00:56:49'),
-(6, 1, 'Juri 6', 300000, '2025-09-10 00:57:01', '2025-09-10 00:57:01'),
-(7, 1, 'Juri 7', 300000, '2025-09-10 00:57:11', '2025-09-10 00:57:11'),
-(8, 1, 'Juri 8', 300000, '2025-09-10 00:57:23', '2025-09-10 00:57:23'),
-(9, 1, 'Juri 9', 300000, '2025-09-10 00:58:09', '2025-09-10 00:58:09'),
-(10, 1, 'Admin 1', 150000, '2025-09-10 00:58:20', '2025-09-10 00:58:20'),
-(11, 1, 'Admin 2', 150000, '2025-09-10 00:58:29', '2025-09-10 00:58:29'),
-(12, 1, 'Admin 3', 150000, '2025-09-10 00:58:39', '2025-09-10 00:58:39'),
-(13, 1, 'Admin 4', 150000, '2025-09-10 00:58:51', '2025-09-10 00:58:51'),
-(14, 1, 'Admin 5 (JERY)', 200000, '2025-09-10 00:59:06', '2025-09-10 20:25:07'),
-(15, 1, 'Piala', 2875000, '2025-09-10 00:59:18', '2025-09-10 00:59:18'),
-(16, 1, 'Security', 300000, '2025-09-10 00:59:29', '2025-09-10 00:59:29'),
-(17, 1, 'Konsumsi', 600000, '2025-09-10 00:59:41', '2025-09-10 00:59:41'),
-(18, 1, 'ATK', 200000, '2025-09-10 01:03:51', '2025-09-10 01:03:51'),
-(19, 1, 'Lain-Lain', 200000, '2025-09-10 01:04:18', '2025-09-10 01:04:18'),
-(20, 1, 'Spanduk', 486000, '2025-09-10 01:04:35', '2025-09-10 01:04:35'),
-(21, 1, 'Jangkrik', 15000, '2025-09-10 01:05:03', '2025-09-10 01:05:03'),
-(22, 1, 'Kondisional', 150000, '2025-09-10 01:05:26', '2025-09-10 01:05:26'),
-(23, 1, 'Panpel', 750000, '2025-09-10 01:05:39', '2025-09-10 01:05:39'),
-(24, 1, 'MC', 300000, '2025-09-10 01:05:50', '2025-09-10 01:05:50'),
-(25, 1, 'Tulis', 200000, '2025-09-10 01:06:04', '2025-09-10 01:06:04'),
-(26, 1, 'Sound', 250000, '2025-09-10 01:06:17', '2025-09-10 01:06:17'),
-(27, 1, 'Jamtrok', 200000, '2025-09-10 01:06:41', '2025-09-10 01:06:41'),
-(28, 1, 'Listrik & Kursi', 150000, '2025-09-10 01:06:55', '2025-09-10 01:06:55'),
-(29, 1, 'Piagam & Tiket', 700000, '2025-09-10 01:07:17', '2025-09-10 01:07:17'),
-(30, 1, 'Media', 350000, '2025-09-10 01:07:31', '2025-09-10 01:07:31'),
-(31, 1, 'Free', 1705000, '2025-09-10 01:07:43', '2025-09-10 01:07:43'),
-(32, 1, 'Gantangan', 300000, '2025-09-10 01:07:54', '2025-09-10 01:07:54'),
 (33, 4, 'Juri 1', 200000, '2025-10-05 05:46:22', '2025-10-05 05:46:22'),
 (34, 4, 'Juri 2', 200000, '2025-10-05 05:46:46', '2025-10-05 05:46:46'),
 (35, 4, 'Juri 3', 200000, '2025-10-05 05:47:08', '2025-10-05 05:47:08'),
@@ -284,7 +249,9 @@ INSERT INTO `pengeluarans` (`id`, `event_id`, `uraian`, `jumlah`, `created_at`, 
 (37, 4, 'Juri 5', 200000, '2025-10-05 05:47:53', '2025-10-05 05:47:53'),
 (38, 4, 'Admin 1', 500000, '2025-10-05 05:48:30', '2025-10-05 05:48:30'),
 (39, 4, 'Konsumsi', 400000, '2025-10-05 05:49:00', '2025-10-05 05:49:00'),
-(40, 4, 'piala', 500000, '2025-10-05 05:49:31', '2025-10-05 05:49:31');
+(40, 4, 'piala', 500000, '2025-10-05 05:49:31', '2025-10-05 05:49:31'),
+(45, 8, 'uang makan', 50000, '2026-04-23 10:16:56', '2026-04-23 10:16:56'),
+(46, 9, 'uang makan', 100000, '2026-04-24 09:06:46', '2026-04-24 09:06:46');
 
 -- --------------------------------------------------------
 
@@ -306,9 +273,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('kdDKFxMWrDwKhBia8qcYIh5zRI61oMI5hXng7hvo', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWUlKR2NydzZPRFd5cGFsVFNvWkI4dnlqRnRIazJhQUxxVjhEMVBQNCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1759818968),
-('KDoQJwZUPbo9Rflfum2AtjQErZrTqm99nkBiDxNR', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoibUl3N1VGWXpvNmFiZ1pQRzN6Yk9Sb2t1a1F4Z00yUUtTSzRaWGpzYSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fXM6MzoidXJsIjthOjE6e3M6ODoiaW50ZW5kZWQiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO319', 1759763257),
-('zzbFytPvMeni5qH2YJJy4aV7kmDw362YLWl0kH0i', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoidzRhOURjVVFXU21TaktWVWZXZzhjYkV3QjRjSTEzNmg0bUkzbVBEWCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fXM6MzoidXJsIjthOjE6e3M6ODoiaW50ZW5kZWQiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO319', 1759799528);
+('abbVq58xO2ag3Xvt6lAf9UXIqjQa4XWvCOKThPfy', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiMGdSQ29kbTJSTjdsR0Zob3RDNjRHWHVRTnBVNkRUYlpxNmtuUmxEbCI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozMToiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2Rhc2hib2FyZCI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI3OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvbG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1777077539),
+('EA4iopccfTpjWH8bOA4GKo1x085s7jQcSB2oqMIX', 5, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVWJVQlozUFg1UFMxeVpEcFNUdnZ1OGE2NVNkMWR1ZlNCVEtrMkVlUyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjM6InVybCI7YTowOnt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6NTt9', 1777052816),
+('rz6oDEsfrvKmk3LC40OKEyGpBxNkXXLKm7UUzguM', 7, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiS2hDNFQwOXlycVRwOTMzVklKSGZWcVhPWTBUWmZkbVd1SjhDd2lRbSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjM6InVybCI7YTowOnt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6Nzt9', 1777077192);
 
 -- --------------------------------------------------------
 
@@ -333,7 +300,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'coba', 'coba@gmail.com', NULL, '$2y$12$ofY2JwfIkobQPPwW4R1ebOyFDM5QCesYSBBc03fEsMsHCmGwDwzA.', NULL, '2025-09-05 21:11:20', '2025-09-05 21:11:20'),
-(3, 'Della', 'della@gmail.com', NULL, '$2y$12$PXjriV.DlAidJJJpelU.relVnJlQIKWBpa4WRF5BN50iL0E9Eu3fK', NULL, '2025-10-06 07:47:10', '2025-10-06 07:47:10');
+(3, 'Della', 'della@gmail.com', NULL, '$2y$12$PXjriV.DlAidJJJpelU.relVnJlQIKWBpa4WRF5BN50iL0E9Eu3fK', NULL, '2025-10-06 07:47:10', '2025-10-06 07:47:10'),
+(5, 'hesty', 'hesty@gmail.com', NULL, '$2y$12$7RlAQrP0mHs2BiqR49qIo.LPdZh/U21tm1aWiEp5.MMkLrxBRTTbe', NULL, NULL, '2026-04-23 09:41:34'),
+(7, 'admin', 'admin@gmail.com', NULL, '$2y$12$cMpPsliGlJX/YkGlC9wa5uc/SOT8aPxN7TL0.G5xElMamQUwmTjN.', NULL, '2026-04-25 00:31:50', '2026-04-24 17:33:04');
 
 --
 -- Indexes for dumped tables
@@ -428,7 +397,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -446,7 +415,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `kelas_lombas`
 --
 ALTER TABLE `kelas_lombas`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -458,13 +427,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pengeluarans`
 --
 ALTER TABLE `pengeluarans`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
